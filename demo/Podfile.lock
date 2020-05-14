@@ -1,0 +1,130 @@
+PODS:
+  - AgoraRtcEngine_iOS (2.9.0.103)
+  - BJLiveBase (2.8.0):
+    - BJLiveBase/Base (= 2.8.0)
+  - BJLiveBase/Auth (2.8.0)
+  - BJLiveBase/Base (2.8.0):
+    - BJLiveBase/extobjc
+    - BJLiveBase/Foundation
+    - BJLiveBase/UIKit
+  - BJLiveBase/extobjc (2.8.0)
+  - BJLiveBase/Foundation (2.8.0):
+    - BJLiveBase/extobjc
+  - BJLiveBase/HUD (2.8.0):
+    - BJLiveBase/UIKit
+  - BJLiveBase/Networking (2.8.0):
+    - BJLiveBase/Base
+  - "BJLiveBase/Networking+BaijiaYun (2.8.0)":
+    - BJLiveBase/Base
+    - BJLiveBase/Networking
+  - BJLiveBase/PocketSocket/Client (2.8.0):
+    - BJLiveBase/PocketSocket/Core
+  - BJLiveBase/PocketSocket/Core (2.8.0)
+  - BJLiveBase/UIKit (2.8.0):
+    - BJLiveBase/extobjc
+    - BJLiveBase/Foundation
+  - BJLiveBase/WebImage/AFNetworking (2.8.0):
+    - BJLiveBase/Networking
+    - BJLiveBase/WebImage/BJLWebImage
+  - BJLiveBase/WebImage/BJLWebImage (2.8.0)
+  - BJLiveBase/YYModel (2.8.0)
+  - BJLiveCore (2.7.4):
+    - BJLiveBase (~> 2.8.0)
+    - BJLiveBase/Auth (~> 2.8.0)
+    - BJLiveBase/Base (~> 2.8.0)
+    - BJLiveBase/Networking (~> 2.8.0)
+    - "BJLiveBase/Networking+BaijiaYun (~> 2.8.0)"
+    - BJLiveBase/PocketSocket/Client (~> 2.8.0)
+    - BJLiveBase/WebImage/AFNetworking (~> 2.8.0)
+    - BJLiveBase/WebImage/BJLWebImage (~> 2.8.0)
+    - BJLiveBase/YYModel (~> 2.8.0)
+    - BJLiveCore/static (= 2.7.4)
+  - BJLiveCore/BJHLMediaPlayer (2.7.4):
+    - BJLiveBase (~> 2.8.0)
+    - BJLiveBase/Auth (~> 2.8.0)
+    - BJLiveBase/Base (~> 2.8.0)
+    - BJLiveBase/Networking (~> 2.8.0)
+    - "BJLiveBase/Networking+BaijiaYun (~> 2.8.0)"
+    - BJLiveBase/PocketSocket/Client (~> 2.8.0)
+    - BJLiveBase/WebImage/AFNetworking (~> 2.8.0)
+    - BJLiveBase/WebImage/BJLWebImage (~> 2.8.0)
+    - BJLiveBase/YYModel (~> 2.8.0)
+  - BJLiveCore/BJYRTCEngine (2.7.4):
+    - AgoraRtcEngine_iOS (= 2.9.0.103)
+    - BJLiveBase (~> 2.8.0)
+    - BJLiveBase/Auth (~> 2.8.0)
+    - BJLiveBase/Base (~> 2.8.0)
+    - BJLiveBase/Networking (~> 2.8.0)
+    - "BJLiveBase/Networking+BaijiaYun (~> 2.8.0)"
+    - BJLiveBase/PocketSocket/Client (~> 2.8.0)
+    - BJLiveBase/WebImage/AFNetworking (~> 2.8.0)
+    - BJLiveBase/WebImage/BJLWebImage (~> 2.8.0)
+    - BJLiveBase/YYModel (~> 2.8.0)
+    - TXLiteAVSDK_TRTC (= 6.9.8341)
+  - BJLiveCore/static (2.7.4):
+    - BJLiveBase (~> 2.8.0)
+    - BJLiveBase/Auth (~> 2.8.0)
+    - BJLiveBase/Base (~> 2.8.0)
+    - BJLiveBase/Networking (~> 2.8.0)
+    - "BJLiveBase/Networking+BaijiaYun (~> 2.8.0)"
+    - BJLiveBase/PocketSocket/Client (~> 2.8.0)
+    - BJLiveBase/WebImage/AFNetworking (~> 2.8.0)
+    - BJLiveBase/WebImage/BJLWebImage (~> 2.8.0)
+    - BJLiveBase/YYModel (~> 2.8.0)
+    - BJLiveCore/BJHLMediaPlayer
+    - BJLiveCore/BJYRTCEngine
+  - BJLiveUI (2.7.4):
+    - BJLiveUI/static (= 2.7.4)
+  - BJLiveUI/static (2.7.4):
+    - BJLiveUI/static.dependencies
+  - BJLiveUI/static.dependencies (2.7.4):
+    - BJLiveBase (>= 2.8.0)
+    - BJLiveBase/Auth (>= 2.8.0)
+    - BJLiveBase/Base (>= 2.8.0)
+    - BJLiveBase/HUD (>= 2.8.0)
+    - BJLiveBase/Networking (>= 2.8.0)
+    - BJLiveBase/WebImage/AFNetworking (>= 2.8.0)
+    - BJLiveCore (~> 2.7.4)
+    - QBImagePickerController (~> 3.0)
+  - FLEX (2.4.0)
+  - Masonry (1.1.0)
+  - QBImagePickerController (3.4.0)
+  - ReactiveObjC (3.1.1)
+  - TXLiteAVSDK_TRTC (6.9.8341)
+
+DEPENDENCIES:
+  - BJLiveUI (from `../`)
+  - FLEX (~> 2.0)
+  - Masonry
+  - ReactiveObjC
+
+SPEC REPOS:
+  http://git.baijiashilian.com/open-ios/specs.git:
+    - BJLiveBase
+    - BJLiveCore
+  https://github.com/CocoaPods/Specs.git:
+    - AgoraRtcEngine_iOS
+    - FLEX
+    - Masonry
+    - QBImagePickerController
+    - ReactiveObjC
+    - TXLiteAVSDK_TRTC
+
+EXTERNAL SOURCES:
+  BJLiveUI:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  AgoraRtcEngine_iOS: 16a335453909c7655fe995b3d1b518985e5226d4
+  BJLiveBase: b1c8cea408f1d095dabb0f0f0f62c65c01161f13
+  BJLiveCore: e92322b0e6090b41f0859b17d8a02eba21493bcb
+  BJLiveUI: b9f47705bb6e8ebecacaaefc95e623f53c145439
+  FLEX: bd1a39e55b56bb413b6f1b34b3c10a0dc44ef079
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  QBImagePickerController: d54cf93db6decf26baf6ed3472f336ef35cae022
+  ReactiveObjC: 011caa393aa0383245f2dcf9bf02e86b80b36040
+  TXLiteAVSDK_TRTC: 0d23d1ff11bfed12e6ed2ea48eb013459018e054
+
+PODFILE CHECKSUM: bd914e5d1604fefc6155542f8f86280c9c4c6189
+
+COCOAPODS: 1.9.1

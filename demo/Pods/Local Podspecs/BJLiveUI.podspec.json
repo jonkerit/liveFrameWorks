@@ -1,0 +1,126 @@
+{
+  "name": "BJLiveUI",
+  "version": "2.7.4",
+  "summary": "BJLiveUI SDK.",
+  "description": "BJLiveUI SDK for iOS.",
+  "homepage": "http://www.baijiayun.com/",
+  "license": "MIT",
+  "authors": {
+    "MingLQ": "minglq.9@gmail.com"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source": {
+    "git": "http://git.baijiashilian.com/open-ios/BJLiveUI.git",
+    "tag": "2.7.4"
+  },
+  "requires_arc": true,
+  "pod_target_xcconfig": {
+    "CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES": "YES",
+    "GCC_PREPROCESSOR_DEFINITIONS": "$(inherited) BJLIVEUI_NAME=BJLiveUI BJLIVEUI_VERSION=2.7.4"
+  },
+  "user_target_xcconfig": {
+    "CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES": "YES"
+  },
+  "default_subspecs": [
+    "static"
+  ],
+  "subspecs": [
+    {
+      "name": "static",
+      "preserve_paths": "frameworks/BJLiveUI.framework",
+      "source_files": "frameworks/BJLiveUI.framework/Versions/A/Headers/**/*.h",
+      "public_header_files": "frameworks/BJLiveUI.framework/Versions/A/Headers/**/*.h",
+      "resources": [
+        "frameworks/BJLiveUI.framework/Versions/A/Resources/BJLiveUI.bundle",
+        "frameworks/BJLiveUI.framework/Versions/A/Resources/BJLiveUIMedia.bundle",
+        "frameworks/BJLiveUI.framework/Versions/A/Resources/BJLSurfaceClass.bundle",
+        "frameworks/BJLiveUI.framework/Versions/A/Resources/BJLInteractiveClass.bundle"
+      ],
+      "vendored_frameworks": "frameworks/BJLiveUI.framework",
+      "dependencies": {
+        "BJLiveUI/static.dependencies": [
+
+        ]
+      }
+    },
+    {
+      "name": "static.source",
+      "public_header_files": [
+        "classes/**/BJLiveUI.h",
+        "classes/**/BJLRoomViewController.h",
+        "classes/**/BJLOverlayViewController.h",
+        "classes/**/BJLOverlayContainerController.h",
+        "interactive/**/BJLIcRoomViewController.h",
+        "surface/**/BJLScRoomViewController.h"
+      ],
+      "source_files": [
+        "classes",
+        "classes/**/*.{h,m}",
+        "interactive",
+        "interactive/**/*.{h,m}",
+        "surface",
+        "surface/**/*.{h,m}"
+      ],
+      "resource_bundles": {
+        "BJLiveUI": [
+          "bundles/BJLiveUI/**/*.*"
+        ],
+        "BJLiveUIMedia": [
+          "bundles/like.mp3"
+        ],
+        "BJLSurfaceClass": [
+          "bundles/BJLSurfaceClass/**/*.*"
+        ],
+        "BJLInteractiveClass": [
+          "bundles/BJLInteractiveClass/**/*.*"
+        ]
+      },
+      "dependencies": {
+        "BJLiveUI/static.dependencies": [
+
+        ]
+      }
+    },
+    {
+      "name": "static.dependencies",
+      "frameworks": [
+        "CoreGraphics",
+        "Foundation",
+        "MobileCoreServices",
+        "Photos",
+        "SafariServices",
+        "UIKit",
+        "WebKit",
+        "SpriteKit"
+      ],
+      "dependencies": {
+        "BJLiveBase": [
+          ">= 2.8.0"
+        ],
+        "BJLiveBase/Base": [
+          ">= 2.8.0"
+        ],
+        "BJLiveBase/Auth": [
+          ">= 2.8.0"
+        ],
+        "BJLiveBase/HUD": [
+          ">= 2.8.0"
+        ],
+        "BJLiveBase/Networking": [
+          ">= 2.8.0"
+        ],
+        "BJLiveBase/WebImage/AFNetworking": [
+          ">= 2.8.0"
+        ],
+        "BJLiveCore": [
+          "~> 2.7.4"
+        ],
+        "QBImagePickerController": [
+          "~> 3.0"
+        ]
+      }
+    }
+  ]
+}
