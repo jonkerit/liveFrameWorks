@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
     s.ios.deployment_target = "9.0"
     
     s.source        = {
-        :git => "https://github.com/jonkerit/liveFrameWorks.git",
+        :git => "it@git.baijiashilian.com:ios/specs.git",
         :tag => s.version.to_s
     }
     
