@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
     s.ios.deployment_target = "9.0"
     
     s.source        = {
-        :git => "http://git.baijiashilian.com/open-ios/BJLiveUI.git",
+        :git => "https://github.com/jonkerit/liveFrameWorks.git",
         :tag => s.version.to_s
     }
     
@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
         "CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES" => "YES" # requies both `user_target_xcconfig` and `pod_target_xcconfig`
     }
     
-    s.default_subspecs = ['static']
+    s.default_subspecs = ['static.source']
     
     s.subspec 'static' do |ss|
         ss.preserve_paths       = 'frameworks/BJLiveUI.framework'
