@@ -57,7 +57,7 @@ NS_ASSUME_NONNULL_BEGIN
     [self makeObservingForProgressHUD];
     [self makeObservingForLoadingVideo];
     [self makeObservingForLikeEffect];
-    [self makeObservingForEnvelope];
+//    [self makeObservingForEnvelope];
     [self makeObservingForQuestion];
     [self makeObservingForLossRate];
     [self makeObservingForCountDownTimer];

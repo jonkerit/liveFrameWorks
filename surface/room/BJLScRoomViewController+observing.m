@@ -390,7 +390,7 @@
     [self makeObservingForVideoPosition];
     [self makeObservingForPPTAndDrawing];
     [self makeObservingForProgressHUD];
-    [self makeObservingForEnvelope];
+//    [self makeObservingForEnvelope];
     [self makeObservingForLikeEffect];
     [self makeObservingForCountDownTimer];
     [self makeObservingForQuestion];
