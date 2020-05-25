@@ -23,7 +23,8 @@
 @property (nonatomic) UIView *infoView;
 @property (nonatomic) UILabel *nameLabel;
 @property (nonatomic, nullable) NSString *imageURLString;// 用户未开视频时的占位图url
-
+@property (nonatomic) NSTimer *timer;
+@property (nonatomic) NSInteger times;
 // 加载中的loading
 @property (nonatomic) id<BJLObservation> mediaUserObservation;
 @property (nonatomic) UIView *videoLoadingView;
@@ -404,11 +405,9 @@
     self.videoPlaceholderView.hidden = hidden;
     self.infoView.hidden = NO;
     self.nameLabel.hidden = NO;
-    self.nameLabel.text = hidden?@"点击关闭省流量模式":@"点击关闭省流量模式";
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        self.infoView.hidden = YES;
-        self.nameLabel.hidden = YES;
-    });
+    self.nameLabel.text = !hidden?@"点击关闭省流量模式":@"点击打开省流量模式";
+    self.times = 3;
+    [self.timer fire];
 }
 
 - (void)updateLoadingViewHidden:(BOOL)hidden {
@@ -537,4 +536,29 @@
 #pragma clang diagnostic pop
 }
 
+- (void)timerRepAction{
+    self.times--;
+    if (self.times == 0) {
+        // 隐藏
+        self.infoView.hidden = YES;
+        self.nameLabel.hidden = YES;
+        [self.timer invalidate];
+        self.timer = nil;
+    }
+}
+- (NSTimer *)timer{
+    if (!_timer) {
+        if (@available(iOS 10.0, *)) {
+            bjl_weakify(self);
+            _timer = [NSTimer timerWithTimeInterval:1 repeats:YES block:^(NSTimer * _Nonnull timer) {
+                bjl_strongify(self);
+                [self timerRepAction];
+            }];
+        } else {
+            _timer = [NSTimer timerWithTimeInterval:1 target:self selector:@selector(timerRepAction) userInfo:nil repeats:YES ];
+        }
+        [[NSRunLoop currentRunLoop] addTimer:_timer forMode:NSDefaultRunLoopMode];
+    }
+    return _timer;
+}
 @end
