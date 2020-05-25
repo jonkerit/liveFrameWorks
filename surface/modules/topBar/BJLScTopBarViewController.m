@@ -82,10 +82,10 @@
     [self.view addSubview:self.downPackageLossRateButton];
 
     [self.closeNewButton bjl_makeConstraints:^(BJLConstraintMaker * _Nonnull make) {
-        make.left.equalTo(self.view).offset(8.0);
+        make.left.equalTo(self.view).offset(5.0);
         make.centerY.equalTo(self.view);
-        make.width.equalTo(@24.0);
-        make.height.equalTo(@24.0);
+        make.width.equalTo(@35.0);
+        make.height.equalTo(@35.0);
     }];
     [self.titleLabel bjl_makeConstraints:^(BJLConstraintMaker * _Nonnull make) {
         make.left.equalTo(self.closeNewButton.bjl_right).offset(8.0);

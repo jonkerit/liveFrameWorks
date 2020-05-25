@@ -68,9 +68,8 @@
         bjl_strongify(self);
         [self bjl_dismissPresentedViewControllerAnimated:NO completion:nil];
         [self.overlayViewController hide];
-        // 发生网络请求错误，返回是一个页面
-        BJLError *error = [[BJLError alloc] init];
-        [self roomViewController:self enterRoomFailureWithError:error];
+        // 添加返回按钮
+        [self makeErrorView];
     }];
     [self.loadingViewController setHideCallback:^{
         bjl_strongify(self);

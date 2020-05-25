@@ -21,7 +21,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)updateSecondMinorContentViewWithUser:(nullable BJLMediaUser *)user recording:(BOOL)recording;
 - (void)updateMinorViewRatio:(CGFloat)ratio;
 - (void)updateOverlayImageContainerView;
-
+/// 错误页UI
+- (void)makeErrorView;
 @end
 
 NS_ASSUME_NONNULL_END

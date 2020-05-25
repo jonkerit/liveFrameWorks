@@ -908,4 +908,24 @@
     }
 }
 
+// 错误页UI
+- (void)makeErrorView{
+    // top bar
+    if ([[self.loadingViewController.view subviews] containsObject:self.topBarViewController.view]) {
+        return;
+    }
+    self.topBarViewController = [[BJLScTopBarViewController alloc] initWithRoom:self.room];
+    [self.loadingViewController addChildViewController:self.topBarViewController];
+    [self.loadingViewController.view addSubview:self.topBarViewController.view];
+    [self.topBarViewController.view bjl_makeConstraints:^(BJLConstraintMaker * _Nonnull make) {
+         make.top.equalTo(self.loadingViewController.view.bjl_safeAreaLayoutGuide ?: self.bjl_topLayoutGuide);
+         make.left.right.equalTo(self.loadingViewController.view);
+         make.height.equalTo(@(BJLScTopBarHeight));
+    }];
+    bjl_weakify(self);
+    [self.topBarViewController setExitCallback:^{
+         bjl_strongify(self);
+         [self exit];
+     }];
+}
 @end
