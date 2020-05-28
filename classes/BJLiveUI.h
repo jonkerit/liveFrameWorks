@@ -16,6 +16,6 @@
 #if __has_include("BJLScRoomViewController.h")
 #import "BJLScRoomViewController.h"
 #endif
-// 修改了
+// 修改了d 
 FOUNDATION_EXPORT NSString * BJLiveUIName(void);
 FOUNDATION_EXPORT NSString * BJLiveUIVersion(void);
