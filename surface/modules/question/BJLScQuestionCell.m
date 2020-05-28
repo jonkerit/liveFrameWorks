@@ -69,8 +69,13 @@ NSString
             label;
         });
         [self.contentView addSubview:self.contentLabel];
+        CGFloat tempF = -8.0;
+        if (isIPhoneXSeries()) {
+            tempF = 35.0;
+        }
         [self.contentLabel bjl_makeConstraints:^(BJLConstraintMaker * _Nonnull make) {
-            make.left.right.equalTo(self.contentView).inset(8.0);
+            make.left.equalTo(self.contentView).inset(8.0);
+            make.right.equalTo(self.contentView).inset(-tempF);
             make.bottom.top.equalTo(self.contentView);
         }];
     }
@@ -104,7 +109,18 @@ NSString
         }];
     }
 }
-
+static inline BOOL isIPhoneXSeries() {
+     BOOL iPhoneXSeries = NO;
+    if (UIDevice.currentDevice.userInterfaceIdiom != UIUserInterfaceIdiomPhone) {
+        return iPhoneXSeries;
+    }
+    if (@available(iOS 11.0, *)) {
+        UIWindow *mainWindow = [[[UIApplication sharedApplication] delegate] window];
+    if (mainWindow.safeAreaInsets.bottom > 0.0)
+        iPhoneXSeries = YES;
+    }
+    return iPhoneXSeries;
+}
 - (void)updateWithQuestion:(nullable BJLQuestion *)question questionReply:(nullable BJLQuestionReply *)questionReply {
     self.question = question;
     self.reply = questionReply;
@@ -149,3 +165,4 @@ NSString
 }
 
 @end
+
