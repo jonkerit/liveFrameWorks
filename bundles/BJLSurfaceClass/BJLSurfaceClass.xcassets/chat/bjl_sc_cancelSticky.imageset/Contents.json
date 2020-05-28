@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "bjl_sc_cancelSticky.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "bjl_sc_cancelSticky@2x.png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "bjl_sc_cancelSticky@3x.png",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
