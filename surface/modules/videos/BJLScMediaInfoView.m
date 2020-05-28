@@ -405,9 +405,9 @@
     self.videoPlaceholderView.hidden = hidden;
     self.infoView.hidden = NO;
     self.nameLabel.hidden = NO;
-    self.nameLabel.text = hidden?@"点击关闭省流量模式":@"点击打开省流量模式";
-    self.times = 3;
-    [self.timer fire];
+    self.nameLabel.text = hidden?@"点击打开省流量模式":@"点击关闭省流量模式";
+//    self.times = 3;
+//    [self.timer fire];
 }
 
 - (void)updateLoadingViewHidden:(BOOL)hidden {
