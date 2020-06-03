@@ -1,0 +1,7 @@
+dependencies: \
+  /var/folders/bm/1rvznmfj4bg02pm_wn88zn1r0000gn/T/cocoapods-pkr4f1sq/Pods/BJLiveUI/classes/utilities/viewControllers/BJLTableViewController+style.m \
+  /var/folders/bm/1rvznmfj4bg02pm_wn88zn1r0000gn/T/cocoapods-pkr4f1sq/Pods/Target\ Support\ Files/BJLiveUI/BJLiveUI-prefix.pch \
+  /var/folders/bm/1rvznmfj4bg02pm_wn88zn1r0000gn/T/cocoapods-pkr4f1sq/Pods/BJLiveUI/classes/utilities/viewControllers/BJLTableViewController+style.h \
+  /var/folders/bm/1rvznmfj4bg02pm_wn88zn1r0000gn/T/cocoapods-pkr4f1sq/Pods/Headers/Private/BJLiveBase/BJLTableViewController.h \
+  /var/folders/bm/1rvznmfj4bg02pm_wn88zn1r0000gn/T/cocoapods-pkr4f1sq/Pods/BJLiveUI/classes/utilities/BJLAppearance.h \
+  /var/folders/bm/1rvznmfj4bg02pm_wn88zn1r0000gn/T/cocoapods-pkr4f1sq/Pods/Headers/Private/BJLiveBase/UIKit+BJL_M9Dev.h
