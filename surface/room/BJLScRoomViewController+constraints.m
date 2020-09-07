@@ -918,7 +918,7 @@
     [self.loadingViewController addChildViewController:self.topBarViewController];
     [self.loadingViewController.view addSubview:self.topBarViewController.view];
     [self.topBarViewController.view bjl_makeConstraints:^(BJLConstraintMaker * _Nonnull make) {
-         make.top.equalTo(self.loadingViewController.view.bjl_safeAreaLayoutGuide ?: self.bjl_topLayoutGuide);
+        make.top.equalTo(self.loadingViewController.view.bjl_safeAreaLayoutGuide ?: self.loadingViewController.bjl_topLayoutGuide);
          make.left.right.equalTo(self.loadingViewController.view);
          make.height.equalTo(@(BJLScTopBarHeight));
     }];

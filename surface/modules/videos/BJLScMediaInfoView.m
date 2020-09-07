@@ -409,7 +409,10 @@
 //    self.times = 3;
 //    [self.timer fire];
 }
-
+- (void)hiddenWarmLabel:(BOOL)hidden {
+    self.infoView.hidden = hidden;
+    self.nameLabel.hidden = hidden;
+}
 - (void)updateLoadingViewHidden:(BOOL)hidden {
     if (!self.videoLoadingView) {
         return;

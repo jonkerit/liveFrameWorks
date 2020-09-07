@@ -330,6 +330,7 @@
      #pragma mark - 修改处
     // 全屏切换
     [self.changeScreenButton bjl_addHandler:^(UIButton * _Nonnull button) {
+        [self.teacherMediaInfoView hiddenWarmLabel:!button.isSelected];
         button.selected = !button.isSelected;
         if (button.isSelected) {
             [self replaceMajorContentViewWithTeacherMediaInfoView];

@@ -33,7 +33,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)updateWithLikeCount:(NSInteger)count hidden:(BOOL)hidden;
 
 - (void)destroy;
-
+// 显示或者隐藏省流量模式提示
+- (void)hiddenWarmLabel:(BOOL)hidden;
 @end
 
 NS_ASSUME_NONNULL_END
