@@ -541,14 +541,6 @@
             [button setImage:[UIImage bjlsc_imageNamed:@"bjl_sc_handup_selected"] forState:UIControlStateSelected | UIControlStateHighlighted];
             button;
         });
-//        self.handUpButton.hidden = YES;
-//        [self.toolView addSubview:self.handUpButton];
-//
-//        [self.handUpButton bjl_makeConstraints:^(BJLConstraintMaker * _Nonnull make) {
-//            make.bottom.equalTo(self.majorContentView).offset(-BJLScViewSpaceM);
-//            make.right.equalTo(self.majorContentView.bjl_right).offset(-6.0);
-//            make.width.height.equalTo(@(BJLScControlSize));
-//        }];
         
         self.opertionScreenBtn = ({
             UIButton *button = [UIButton new];
@@ -656,6 +648,13 @@
                 make.top.equalTo(self.questionButton).offset(10.0);
                 make.left.equalTo(self.questionButton.bjl_centerX).offset(10.0);
                 make.height.width.equalTo(@(8));
+            }];
+            self.handUpButton.hidden = YES;
+            [self.toolView addSubview:self.handUpButton];
+
+            [self.handUpButton bjl_makeConstraints:^(BJLConstraintMaker * _Nonnull make) {
+                make.left.equalTo(self.questionButton.bjl_right).offset(25.0);
+                make.top.bottom.width.equalTo(self.noticeButton);
             }];
         }
     }
