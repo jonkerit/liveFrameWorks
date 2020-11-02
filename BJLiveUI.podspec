@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
     
     s.name          = "BJLiveUI"
-    s.version       = "2.9.2"
+    s.version       = "2.9.3"
     s.summary       = "BJLiveUI SDK."
     s.description   = "BJLiveUI SDK for iOS."
     
@@ -16,14 +16,13 @@ Pod::Spec.new do |s|
         :git => "https://github.com/jonkerit/liveFrameWorks.git",
         :tag => s.version.to_s
     }
-        
+    
     s.requires_arc = true
     
     # use <"> but not <"> for #{s.name} and #{s.version}
     s.pod_target_xcconfig = {
         "CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES" => "YES", # requies both `user_target_xcconfig` and `pod_target_xcconfig`
         "GCC_PREPROCESSOR_DEFINITIONS" => "$(inherited) BJLIVEUI_NAME=#{s.name} BJLIVEUI_VERSION=#{s.version}",
-        "CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED" => "NO",
         "EXCLUDED_ARCHS[sdk=iphonesimulator*]" => "arm64"
     }
     s.user_target_xcconfig = {
@@ -31,6 +30,7 @@ Pod::Spec.new do |s|
     }
     
     s.default_subspecs = ["static.source"]
+    s.frameworks = ["CoreGraphics", "Foundation", "CoreServices", "Photos", "PhotosUI", "SafariServices", "UIKit", "WebKit", "SpriteKit"]
 
     s.subspec "static.source" do |ss|
         ss.public_header_files = [
@@ -46,9 +46,11 @@ Pod::Spec.new do |s|
             "BJLInteractiveClass" => ["bundles/BJLInteractiveClass/**/*.*"],
             "BJLiveUIMedia" => ["bundles/like.mp3"]
         }
-        ss.frameworks = ["CoreGraphics", "Foundation", "CoreServices", "Photos", "PhotosUI", "SafariServices", "UIKit", "WebKit", "SpriteKit"]
-        ss.dependency "BaijiaYun/BJLiveCore",                          "~> 2.10.0"
+
+        ss.dependency "BaijiaYun/BJLiveCore",                          "~> 2.10.4"
+        ss.dependency "BaijiaYun/BJLiveBase",                          "~> 2.10.0"
         ss.dependency "QBImagePickerController",                       "~> 3.0"
     end
     
 end
+
